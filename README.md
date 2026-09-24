@@ -88,3 +88,63 @@ The application has been deployed using **Vercel**.
 **Live Application:**  
 https://segmento-social-listening-dashboard-pi.vercel.app/
 
+---
+
+# Day 3 – MongoDB Database Setup & Backend Connection
+
+## Objective
+
+The objective of Day 3 was to set up MongoDB as the database for the Social Listening Tool and connect the MongoDB database with the backend server.
+
+## Work Completed
+
+### 1. Database Selection
+
+MongoDB was selected as the database for the Social Listening Tool.
+
+MongoDB is a NoSQL database that stores data in a flexible document-based format.
+
+### 2. MongoDB Atlas Setup
+
+- Created and configured MongoDB Atlas.
+- Created a MongoDB Atlas cluster named `SocialListeningCluster`.
+- Configured the required database settings.
+
+### 3. Database User Creation
+
+Created a MongoDB database user with the required permissions.
+
+The database user is used to securely authenticate the backend application with MongoDB Atlas.
+
+### 4. MongoDB Connection URI
+
+Generated the MongoDB connection URI from MongoDB Atlas.
+
+The connection URI is used by the backend server to connect to the MongoDB Atlas cluster.
+
+### 5. Environment Configuration
+
+Added the MongoDB connection URI to the backend `.env` file.
+
+```env
+MONGODB_URI=your_mongodb_connection_uri
+
+###Workflow
+Choose MongoDB
+      ↓
+Set Up MongoDB Atlas
+      ↓
+Create MongoDB Cluster
+      ↓
+Create Database User
+      ↓
+Generate MongoDB Connection URI
+      ↓
+Add URI to .env
+      ↓
+Configure MongoDB in Backend
+      ↓
+Connect Backend to MongoDB Atlas
+      ↓
+Verify Successful Connection
+
