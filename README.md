@@ -1,4 +1,4 @@
-# Segmento Social Listening Dashboard
+# Segmento Social Listening Tool
 
 A sample Social Listening Dashboard developed as part of the Segmento task.
 
