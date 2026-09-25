@@ -77,96 +77,104 @@ On the second day, I extended the dashboard by developing the **backend and fron
 ### Backend API
 
 Local backend endpoint:
-
-```text
 http://localhost:5000/api/dashboard
 
 ### ☁️ Deployment
-
 The application has been deployed using **Vercel**.
 
 **Live Application:**  
 https://segmento-social-listening-dashboard-pi.vercel.app/
 
 ---
+# Day 3 – MongoDB Database Setup & Backend Connection
 
-📌 Day 3 – MongoDB Database Setup & Backend Connection
-🎯 Objective
+## Objective
 
 The objective of Day 3 was to set up MongoDB as the database for the Social Listening Tool and connect the MongoDB database with the backend server.
 
-✅ Work Completed
-1. Database Selection
+## Work Completed
 
-MongoDB was selected as the database for the Social Listening Tool. MongoDB is a NoSQL database that stores data in a flexible document-based format.
+### 1. Database Selection
 
-2. MongoDB Atlas Setup
-Created and configured MongoDB Atlas.
-Created a MongoDB Atlas cluster named SocialListeningCluster.
-Configured the required database settings.
-3. Database User Creation
+MongoDB was selected as the database for the Social Listening Tool.
 
-Created a MongoDB database user with the required permissions. The database user is used to securely authenticate the backend application with MongoDB Atlas.
+MongoDB is a NoSQL database that stores data in a flexible document-based format.
 
-4. MongoDB Connection URI
+### 2. MongoDB Atlas Setup
 
-Generated the MongoDB connection URI from MongoDB Atlas. The connection URI is used by the backend server to connect to the MongoDB Atlas cluster.
+- Created and configured MongoDB Atlas.
+- Created a MongoDB Atlas cluster named `SocialListeningCluster`.
+- Configured the required database settings.
 
-5. Environment Configuration
+### 3. Database User Creation
 
-Added the MongoDB connection URI to the backend .env file.
+Created a MongoDB database user with the required permissions.
 
+The database user is used to securely authenticate the backend application with MongoDB Atlas.
+
+### 4. MongoDB Connection URI
+
+Generated the MongoDB connection URI from MongoDB Atlas.
+
+The connection URI is used by the backend server to connect to the MongoDB Atlas cluster.
+
+### 5. Environment Configuration
+
+Added the MongoDB connection URI to the backend `.env` file.
+
+```env
 MONGODB_URI=your_mongodb_connection_uri
-🔄 Workflow
 
+###Workflow
 Choose MongoDB
-↓
+      ↓
 Set Up MongoDB Atlas
-↓
+      ↓
 Create MongoDB Cluster
-↓
+      ↓
 Create Database User
-↓
+      ↓
 Generate MongoDB Connection URI
-↓
+      ↓
 Add URI to .env
-↓
+      ↓
 Configure MongoDB in Backend
-↓
+      ↓
 Connect Backend to MongoDB Atlas
-↓
+      ↓
 Verify Successful Connection
 
-📌 Day 4 – YouTube API Integration with MongoDB
-🎯 Objective
+
+
+Day 4 – YouTube API Integration with MongoDB
+Objective
 
 Integrated the YouTube social media platform with the backend using Node.js and Express, and stored YouTube channel metrics in MongoDB Atlas.
 
-✅ Work Completed
+Work Completed
 Integrated YouTube Data API v3.
 Connected YouTube API with the Node.js + Express backend.
 Retrieved YouTube channel metrics such as:
 Channel Name
-Channel ID
 Subscribers
 Number of Videos
 Total Views
+Channel ID
 Connected the backend to MongoDB Atlas.
 Stored the retrieved YouTube data in the social_listening database.
 Created the youtube_channels collection.
-Used MongoDB updateOne() with upsert to save and update channel data.
+Used MongoDB updateOne() with upsert to save/update channel data.
 Tested the complete API flow successfully.
-🔄 YouTube Integration Workflow
 
 YouTube Data API
-↓
+       ↓
 Node.js + Express
-↓
+       ↓
 MongoDB Atlas
-↓
+       ↓
 YouTube Channel Data
 
-🛠️ Technologies Used
+###Technologies Used
 Node.js
 Express.js
 YouTube Data API v3
@@ -174,6 +182,15 @@ MongoDB Atlas
 Axios
 dotenv
 JavaScript
-🎯 Result
 
+Result
 Successfully integrated YouTube → Node.js → MongoDB, with YouTube channel metrics retrieved through the backend and stored in MongoDB for further use in the Social Listening Dashboard.
+
+
+
+
+
+
+
+---
+
