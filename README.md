@@ -146,51 +146,30 @@ Verify Successful Connection
 
 
 
-Day 4 – YouTube API Integration with MongoDB
-Objective
+### 📌 Day 4 – YouTube API Integration with MongoDB
 
-Integrated the YouTube social media platform with the backend using Node.js and Express, and stored YouTube channel metrics in MongoDB Atlas.
+### 🎯 Objective
 
-Work Completed
-Integrated YouTube Data API v3.
-Connected YouTube API with the Node.js + Express backend.
-Retrieved YouTube channel metrics such as:
-Channel Name
-Subscribers
-Number of Videos
-Total Views
-Channel ID
-Connected the backend to MongoDB Atlas.
-Stored the retrieved YouTube data in the social_listening database.
-Created the youtube_channels collection.
-Used MongoDB updateOne() with upsert to save/update channel data.
-Tested the complete API flow successfully.
+Integrated the **YouTube social media platform** with the backend using **Node.js and Express**, and stored YouTube channel metrics in **MongoDB Atlas**.
 
-YouTube Data API
-       ↓
-Node.js + Express
-       ↓
-MongoDB Atlas
-       ↓
-YouTube Channel Data
+### ✅ Work Completed
 
-###Technologies Used
-Node.js
-Express.js
-YouTube Data API v3
-MongoDB Atlas
-Axios
-dotenv
-JavaScript
+Integrated **YouTube Data API v3** and connected it with the **Node.js + Express backend**. Retrieved YouTube channel metrics such as **Channel Name, Subscribers, Number of Videos, Total Views, and Channel ID**. Connected the backend to **MongoDB Atlas** and stored the retrieved YouTube data in the **`social_listening`** database. Created the **`youtube_channels`** collection and used MongoDB **`updateOne()` with `upsert`** to save and update channel data. The complete API flow was successfully tested.
 
-Result
-Successfully integrated YouTube → Node.js → MongoDB, with YouTube channel metrics retrieved through the backend and stored in MongoDB for further use in the Social Listening Dashboard.
+### 🔄 Integration Workflow
 
+**YouTube Data API**  
+↓  
+**Node.js + Express**  
+↓  
+**MongoDB Atlas**  
+↓  
+**YouTube Channel Data**
 
+### 🛠️ Technologies Used
 
+**Node.js • Express.js • YouTube Data API v3 • MongoDB Atlas • Axios • dotenv • JavaScript**
 
+### 🎯 Result
 
-
-
----
-
+Successfully integrated **YouTube → Node.js → MongoDB**, with YouTube channel metrics retrieved through the backend and stored in MongoDB for further use in the **Social Listening Dashboard**.
