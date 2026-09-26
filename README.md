@@ -220,5 +220,5 @@ Connected the **React frontend** with the backend API to retrieve and display th
 ### 🎯 Result
 
 Successfully connected **MongoDB → Backend API → React Frontend** and displayed the stored YouTube channel data dynamically in the Social Listening Dashboard.
+---
 
-> **Note:** YouTube data is retrieved through the YouTube API and stored in MongoDB; the frontend only retrieves and displays the stored data through the backend API.
