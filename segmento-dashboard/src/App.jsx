@@ -11,6 +11,7 @@ import CreateQuery from './components/CreateQuery.jsx'
 import RecentQueries from './components/RecentQueries.jsx'
 import QuickActions from './components/QuickActions.jsx'
 import { kpiData, initialQueries } from './data/sampleData.js'
+import { getYouTubeData } from './youtubeService.js'
 
 export default function App() {
   const [activePage, setActivePage] = useState('listening')
@@ -18,18 +19,31 @@ export default function App() {
   const [queries, setQueries] = useState(initialQueries)
   const createQueryRef = useRef(null)
 
-  // Data received from backend
+  // Data received from dashboard backend
   const [dashboardData, setDashboardData] = useState(null)
 
-  // Connect React frontend to Express backend
+  // YouTube data received from MongoDB
+  const [youtubeData, setYoutubeData] = useState(null)
+
+  // Connect React to backend APIs
   useEffect(() => {
-    fetch('/api/dashboard')      
+    // Dashboard data
+    fetch('/api/dashboard')
       .then((response) => response.json())
       .then((data) => {
         setDashboardData(data)
       })
       .catch((error) => {
         console.error('Error fetching dashboard data:', error)
+      })
+
+    // YouTube data from MongoDB
+    getYouTubeData()
+      .then((data) => {
+        setYoutubeData(data)
+      })
+      .catch((error) => {
+        console.error('Error fetching YouTube data:', error)
       })
   }, [])
 
@@ -105,6 +119,53 @@ export default function App() {
               )
             })}
           </section>
+
+          {/* YOUTUBE DATA FROM MONGODB */}
+          {youtubeData && (
+            <section
+              style={{
+                marginTop: '24px',
+                padding: '24px',
+                borderRadius: '12px',
+                background: '#ffffff',
+                border: '1px solid #e5e7eb',
+              }}
+            >
+              <h2 style={{ marginBottom: '20px' }}>
+                YouTube
+              </h2>
+
+              <p>
+                <strong>Channel:</strong>{' '}
+                {youtubeData.channelName}
+              </p>
+
+              <p>
+                <strong>Subscribers:</strong>{' '}
+                {Number(youtubeData.subscribers).toLocaleString()}
+              </p>
+
+              <p>
+                <strong>Videos:</strong>{' '}
+                {Number(youtubeData.videos).toLocaleString()}
+              </p>
+
+              <p>
+                <strong>Total Views:</strong>{' '}
+                {Number(youtubeData.views).toLocaleString()}
+              </p>
+
+              <p>
+                <strong>Channel ID:</strong>{' '}
+                {youtubeData.channelId}
+              </p>
+
+              <p>
+                <strong>Updated:</strong>{' '}
+                {new Date(youtubeData.updatedAt).toLocaleString()}
+              </p>
+            </section>
+          )}
 
           {/* CHARTS */}
           <section className="charts-grid">
