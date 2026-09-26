@@ -173,3 +173,52 @@ Integrated **YouTube Data API v3** and connected it with the **Node.js + Express
 ### 🎯 Result
 
 Successfully integrated **YouTube → Node.js → MongoDB**, with YouTube channel metrics retrieved through the backend and stored in MongoDB for further use in the **Social Listening Dashboard**.
+
+---
+### 📌 Day 5 – Display MongoDB YouTube Data in React Dashboard
+
+### 🎯 Objective
+
+Connected the **React frontend** with the backend API to retrieve and display the **YouTube data stored in MongoDB Atlas** on the Social Listening Dashboard.
+
+### ✅ Work Completed
+
+- Created a frontend service using `youtubeService.js` to call the backend API.
+- Created the `/api/youtube/saved` endpoint to retrieve YouTube data from MongoDB.
+- Connected the React frontend with the Node.js + Express backend.
+- Retrieved YouTube data stored in the `youtube_channels` collection.
+- Displayed the following YouTube metrics dynamically in the dashboard:
+  - Channel Name
+  - Subscribers
+  - Number of Videos
+  - Total Views
+  - Channel ID
+  - Last Updated Time
+
+### 🔄 Data Flow
+
+**MongoDB Atlas**  
+↓  
+**Node.js + Express Backend**  
+↓  
+**REST API – `/api/youtube/saved`**  
+↓  
+**React Frontend**  
+↓  
+**YouTube Metrics Dashboard**
+
+### 🛠️ Technologies Used
+
+**React • JavaScript • Node.js • Express.js • MongoDB Atlas • REST API**
+
+### 📂 Files Updated
+
+- `server/server.js` – Backend API for retrieving MongoDB data
+- `src/youtubeService.js` – Frontend API service
+- `src/App.jsx` – Displays YouTube data in the React dashboard
+
+### 🎯 Result
+
+Successfully connected **MongoDB → Backend API → React Frontend** and displayed the stored YouTube channel data dynamically in the Social Listening Dashboard.
+
+> **Note:** YouTube data is retrieved through the YouTube API and stored in MongoDB; the frontend only retrieves and displays the stored data through the backend API.
