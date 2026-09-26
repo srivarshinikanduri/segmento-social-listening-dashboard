@@ -95,7 +95,10 @@ app.get("/api/youtube", async (req, res) => {
     res.json(youtubeData);
 
   } catch (error) {
-    console.error("YouTube API error:", error.response?.data || error.message);
+    console.error(
+      "YouTube API error:",
+      error.response?.data || error.message
+    );
 
     res.status(500).json({
       error: "YouTube API request failed"
@@ -103,9 +106,41 @@ app.get("/api/youtube", async (req, res) => {
   }
 });
 
-// Server
-const PORT = 5000;
+// Get saved YouTube data from MongoDB
+app.get("/api/youtube/saved", async (req, res) => {
+  try {
+    const database = client.db("social_listening");
+    const collection = database.collection("youtube_channels");
 
-app.listen(PORT, () => {
-  console.log(`Backend running on http://localhost:${PORT}`);
+    const youtubeData = await collection
+      .find({})
+      .sort({ updatedAt: -1 })
+      .limit(1)
+      .toArray();
+
+    if (youtubeData.length === 0) {
+      return res.status(404).json({
+        error: "No YouTube data found in MongoDB"
+      });
+    }
+
+    res.json(youtubeData[0]);
+
+  } catch (error) {
+    console.error(
+      "MongoDB data retrieval failed:",
+      error.message
+    );
+
+    res.status(500).json({
+      error: "Failed to retrieve YouTube data"
+    });
+  }
+});
+
+// Server
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend running on port ${PORT}`);
 });

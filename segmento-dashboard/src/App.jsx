@@ -28,7 +28,7 @@ export default function App() {
   // Connect React to backend APIs
   useEffect(() => {
     // Dashboard data
-    fetch('/api/dashboard')
+    fetch(`${import.meta.env.VITE_API_URL}/api/dashboard`)
       .then((response) => response.json())
       .then((data) => {
         setDashboardData(data)
