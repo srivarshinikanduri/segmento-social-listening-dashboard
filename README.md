@@ -144,6 +144,7 @@ Connect Backend to MongoDB Atlas
       ↓
 Verify Successful Connection
 
+---
 
 
 ### 📌 Day 4 – YouTube API Integration with MongoDB
@@ -175,7 +176,9 @@ Integrated **YouTube Data API v3** and connected it with the **Node.js + Express
 Successfully integrated **YouTube → Node.js → MongoDB**, with YouTube channel metrics retrieved through the backend and stored in MongoDB for further use in the **Social Listening Dashboard**.
 
 ---
-### 📌 Day 5 – Display MongoDB YouTube Data in React Dashboard
+
+
+###📌 Day 5 – Display MongoDB YouTube Data in React Dashboard
 
 ### 🎯 Objective
 
@@ -220,5 +223,81 @@ Connected the **React frontend** with the backend API to retrieve and display th
 ### 🎯 Result
 
 Successfully connected **MongoDB → Backend API → React Frontend** and displayed the stored YouTube channel data dynamically in the Social Listening Dashboard.
+
+
 ---
+
+### Day -6 Enhanced YouTube analytics with additional metrics ,data in UI, added a top platform filter, Refactored the codebase,worked on Vercel deployment.
+
+A React-based Social Listening Dashboard developed to monitor and visualize social media analytics. The current implementation focuses on **YouTube analytics** with a platform filter and additional YouTube metrics.
+
+## 🚀 Features
+
+- 📊 Social Listening Dashboard UI
+- 🔴 YouTube Analytics integration
+- 📈 YouTube metrics such as:
+  - Subscribers
+  - Total Views
+  - Total Videos
+  - Recent Video Views
+  - Likes
+  - Comments
+  - Published Date
+  - Video Thumbnails
+- 🔽 Platform filter at the top of the dashboard
+  - YouTube
+  - Instagram
+  - Facebook
+  - LinkedIn
+  - X/Twitter
+- 🎨 Improved dashboard UI with colors, icons and analytics cards
+- 🔄 Frontend–Backend API communication
+- 🗄️ MongoDB integration for storing analytics data
+- 🌐 Vercel deployment setup
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- Axios
+- CORS
+
+### Database
+- MongoDB
+-MongoDB Atlas
+
+### API
+- YouTube Data API v3
+
+### Deployment
+- Vercel
+- GitHub
+- Render
+
+## 📁 Project Structure
+
+```text
+segmento-dashboard/
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Sidebar.jsx
+│   │   └── ...
+│   ├── App.jsx
+│   └── youtubeService.js
+│
+├── server/
+│   ├── server.js
+│   └── .env
+│
+├── package.json
+└── README.md
 
