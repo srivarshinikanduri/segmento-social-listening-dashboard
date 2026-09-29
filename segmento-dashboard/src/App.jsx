@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-
 import Sidebar from './components/Sidebar.jsx'
 import Header from './components/Header.jsx'
 import StatCard from './components/StatCard.jsx'
