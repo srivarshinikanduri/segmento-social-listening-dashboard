@@ -301,3 +301,92 @@ segmento-dashboard/
 ├── package.json
 └── README.md
 
+# Segmento – Social Listening Dashboard
+
+Segmento is a social listening and analytics dashboard designed to display social media insights in a centralized interface.
+
+## 📌 Project Overview
+
+The Segmento dashboard provides a platform-based analytics experience where users can select a social media platform and view relevant metrics.
+
+The current implementation includes **YouTube integration** using Google's APIs to retrieve real channel and video analytics data.
+
+---
+
+## 🚀 Current Implementation
+
+### YouTube Analytics Integration
+
+The application is integrated with:
+
+- YouTube Data API v3
+- YouTube Analytics API
+- Google OAuth 2.0
+
+The integration allows the application to securely authenticate with a YouTube account and retrieve real data from the authenticated channel.
+
+### YouTube Data Retrieved
+
+The application retrieves channel-level information including:
+
+- Channel name
+- Channel ID
+- Channel description
+- Channel creation date
+- Channel thumbnail
+- Subscriber count
+- Total channel views
+- Total number of videos
+
+### YouTube Video Data
+
+The application also retrieves recent video information including:
+
+- Video ID
+- Video title
+- Video thumbnail
+- Published date
+- Views
+- Likes
+- Comments
+- Video duration
+
+### YouTube Analytics Data
+
+Additional analytics metrics retrieved through the YouTube Analytics API include:
+
+- Views
+- Watch time
+- Average view duration
+- Average view percentage
+- Likes
+- Comments
+- Shares
+- Subscribers gained
+- Subscribers lost
+
+---
+
+## 🔐 Google OAuth Authentication
+
+Google OAuth 2.0 is used to authenticate the user's YouTube account.
+
+The authentication flow is:
+
+```text
+User
+  ↓
+Google OAuth Login
+  ↓
+YouTube Account Authorization
+  ↓
+OAuth Access Token
+  ↓
+Node.js Backend
+  ↓
+YouTube APIs
+  ↓
+Real YouTube Data
+  ↓
+Segmento Dashboard
+
